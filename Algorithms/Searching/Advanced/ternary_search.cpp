@@ -1,0 +1,3 @@
+#include <iostream>
+using namespace std;
+int main(){int n,x; cout<<"Enter number of sorted elements: ";cin>>n; int a[n]; cout<<"Enter sorted array:\n"; for(int i=0;i<n;i++)cin>>a[i]; cout<<"Enter element to search: ";cin>>x; int l=0,r=n-1; while(l<=r){int m1=l+(r-l)/3,m2=r-(r-l)/3; if(a[m1]==x){cout<<"Element found at index "<<m1;return 0;} if(a[m2]==x){cout<<"Element found at index "<<m2;return 0;} if(x<a[m1])r=m1-1; else if(x>a[m2])l=m2+1; else{l=m1+1;r=m2-1;}} cout<<"Element not found.";}
